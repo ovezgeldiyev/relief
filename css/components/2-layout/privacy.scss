@@ -1,0 +1,34 @@
+.privacy {
+  padding: 35px 0;
+  &__inner {
+    color: #414141;
+    h2 {
+      margin-bottom: 18px;
+      color: $mainDark;
+    }
+    h5 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 36px;
+      font-family: $lato;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+// 540px
+@mixin privacy-xsm-sm {
+  .privacy {
+    padding: 25px 0;
+    &__inner {
+        h5 {
+            margin-bottom: 14px;
+        }
+        p {
+            margin-bottom: 26px;
+        }
+    }
+  }
+}

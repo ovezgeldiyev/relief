@@ -1,0 +1,78 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $white;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: 0.4s;
+    box-shadow: 0px 4px 4px 0px #00000021;
+  }
+  &__inner {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-buttons {
+      display: none;
+    }
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 118px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// 1024px
+@mixin header-lg-xlg {
+  .header {
+    &__inner {
+      padding: 10px 0;
+      &-logo {
+        width: 102px;
+      }
+      &-buttons {
+        display: flex;
+        align-items: center;
+        .button {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+// 390px
+@mixin header-xxxsm-xxsm {
+  .header {
+    &__inner {
+      &-buttons {
+        .button {
+          display: none;
+        }
+        .basketBtn {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

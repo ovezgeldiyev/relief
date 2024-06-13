@@ -1,0 +1,127 @@
+.calc {
+  background: $mainDark;
+  padding: 40px 0 60px 0;
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    background: $white;
+    padding: 30px 40px;
+    border-radius: 4px;
+    h2 {
+      font-weight: 600;
+      color: $mainDark;
+      margin-bottom: 20px;
+    }
+    p {
+      &.lg {
+        margin-bottom: 32px;
+      }
+    }
+    h6 {
+      &.sm {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__group {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      font-weight: 600;
+      color: $mainDark;
+    }
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% - 200px);
+      h4 {
+        width: 66.6%;
+        &:last-child {
+          width: 33.3%;
+        }
+      }
+    }
+    .button {
+      width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      &:hover {
+        background: #f01111;
+      }
+    }
+  }
+}
+
+.inputz {
+  position: relative;
+  input {
+    width: 100%;
+    background: #ffffff;
+    /* Action Black 20% */
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    font-family: $mainFont;
+    color: $black;
+    padding: 14px 23px 13px 38px;
+    &::placeholder {
+      color: #d3d2d1;
+    }
+  }
+  &__outer {
+    position: relative;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #414141;
+    display: block;
+    margin-bottom: 16px;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    @include transformY;
+    left: 22px;
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: #acacac;
+  }
+}
+@mixin calc-sm-md {
+  .calc {
+    &__inner {
+      padding: 20px;
+    }
+    &__total {
+      flex-direction: column;
+      align-items: flex-start;
+      &-row {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

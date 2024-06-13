@@ -1,0 +1,130 @@
+.about {
+  padding: 55px 0;
+  &__inner {
+    position: relative;
+    min-height: 550px;
+    &-title {
+      margin-bottom: 20px;
+      h5 {
+        color: #414141 !important;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-content {
+      width: calc(50% - 10px);
+      max-width: 550px;
+      h2 {
+        color: $mainDark;
+      }
+      p {
+        margin-bottom: 30px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      h4 {
+        margin-bottom: 30px;
+        font-weight: 600;
+        color: #414141;
+        span {
+          color: $mainDark;
+        }
+      }
+      h5 {
+        color: $mainDark;
+        margin-bottom: 20px;
+      }
+    }
+    &-image {
+      padding-bottom: 100%;
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      &-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(50% - 10px);
+        max-width: 550px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &-main {
+      padding-top: 70px;
+      h2 {
+        margin-bottom: 8px;
+        color: $mainDark;
+      }
+    }
+  }
+  &Item {
+    padding: 30px 0;
+    border-bottom: 1px solid #E6E6E6;
+    h6 {
+      margin-bottom: 16px;
+      color: #414141;
+    }
+    p {
+      margin-bottom: 30px;
+      color: #414141;
+    }
+    .button {
+      padding: 12px 33px;
+    }
+  }
+}
+// 1024px
+@mixin about-lg-xlg {
+  .about {
+    &__inner {
+      &-content {
+        p,
+        h4,
+        h5 {
+          margin-bottom: 15px;
+        }
+      }
+      &-main {
+        padding-top: 40px;
+      }
+    }
+  }
+}
+// 930px
+@mixin about-md-lg {
+  .about {
+    padding: 30px 0;
+    &__inner {
+      min-height: unset;
+      &-row {
+        flex-direction: column;
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+      }
+      &-image {
+        &-wrapper {
+          position: relative;
+          width: 100%;
+          max-width: unset;
+          margin: 24px 0;
+        }
+      }
+      &-main {
+        padding-top: 20px;
+        h2 {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

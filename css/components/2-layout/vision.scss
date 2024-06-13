@@ -1,0 +1,139 @@
+.vision {
+  background-color: $black;
+  position: relative;
+  // width: 100vw;
+  overflow: hidden;
+  // height: 100vh;
+  box-sizing: border-box;
+  &__bg {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;  width: 100vw;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px 0;
+    iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      left: 0;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.9) 40%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+  .auto__container {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1280px;
+    @include transform;
+    z-index: 2;
+  }
+  &__inner {
+    font-family: $lato;
+    position: relative;
+    z-index: 1;
+    &-play {
+      display: flex;
+      align-items: center;
+      &:hover {
+        opacity: 1;
+        span {
+          background-color: $mainDark;
+          border-color: $mainDark;
+        }
+      }
+      span {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        border-radius: 50%;
+        border: 2px solid $white;
+        transition: 0.3s ease;
+        img {
+          width: 25px;
+        }
+      }
+      h6 {
+        width: calc(100% - 100px);
+        color: $white;
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: 900;
+      }
+    }
+    h2 {
+      margin-bottom: 18px;
+      color: $white;
+    }
+    p {
+      margin-bottom: 40px;
+      color: $white;
+      max-width: 500px;
+    }
+  }
+}
+@mixin vision-lg-xlg {
+  .vision {
+    &__bg {
+      min-height: 80vh;
+      &::before {
+        background: rgba($color: #000000, $alpha: 0.7);
+      }
+    }
+  }
+}
+// 540px
+@mixin vision-xsm-sm {
+  .vision {
+    &__inner {
+      &-play {
+        span {
+          width: 60px;
+          height: 60px;
+          img {
+            width: 19px;
+          }
+        }
+        h6 {
+          width: calc(100% - 80px);
+        }
+      }
+    }
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .vision__bg iframe {
+    height: 56.25vw;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .vision__bg iframe {
+    width: 177.78vh;
+  }
+}

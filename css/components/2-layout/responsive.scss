@@ -1,0 +1,237 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  @include hero-xxxlg-xxxxlg;
+  .intro {
+    &Item {
+      &__inner {
+        padding: 40px 40px 120px 40px;
+      }
+      &__foot {
+        padding: 32px 40px 30px 40px;
+      }
+    }
+  }
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+  @include contact-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  .search {
+    display: none;
+  }
+  @include hero-xlg-xxlg;
+  @include credit-xlg-xxlg;
+  @include nav-xlg-xxlg;
+  @include donation-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .basket {
+    &Link {
+      width: 100%;
+      max-width: unset;
+      margin: 0;
+      padding: 18px 0;
+      border-bottom: 1px solid #e6e6e6;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 7px;
+        height: 7px;
+        border-top: 1px solid #414141;
+        border-right: 1px solid #414141;
+        content: "";
+        transform: translateY(-70%) rotate(45deg);
+      }
+      .basket__number {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        span {
+          font-size: 12px;
+        }
+      }
+      b {
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+  }
+  .lang {
+    margin: 30px 0 0 0;
+    position: static;
+    .dropMenu {
+      left: unset;
+      right: 0;
+      &__inner {
+        &::before {
+          left: unset;
+          right: 30px;
+        }
+      }
+      li {
+        margin-bottom: 0;
+      }
+      p {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  .intro {
+    &__inner {
+    }
+    &Item {
+      width: auto;
+      position: relative !important;
+      min-width: unset;
+      &.slick-current {
+        width: auto;
+        min-width: 100% !important;
+        left: 0 !important;
+      }
+      &__inner {
+        padding: 30px 20px 120px 20px;
+      }
+      &__foot {
+        padding: 20px 20px 20px 20px;
+      }
+    }
+    &__inner {
+    }
+    .slick {
+      &-track {
+        transform: initial !important;
+        // width: inherit !important;
+        display: flex !important;
+      }
+    }
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include news-lg-xlg;
+  @include donate-lg-xlg;
+  @include about-lg-xlg;
+  @include footer-lg-xlg;
+  @include help-lg-xlg;
+  @include mission-lg-xlg;
+  // appeals page
+  @include today-lg-xlg;
+  @include emer-lg-xlg;
+  @include contact-lg-xlg;
+  @include vision-lg-xlg;
+
+}
+// 930px
+@include md-lg {
+  @include hero-md-lg;
+  @include info-md-lg;
+  @include about-md-lg;
+  @include join-md-lg;
+  @include latest-md-lg;
+  @include mission-md-lg;
+  // appeals page
+  @include today-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include hero-sm-md;
+  @include calc-sm-md;
+  @include checkout-sm-md;
+  @include donate-sm-md;
+  @include footer-sm-md;
+  @include help-sm-md;
+  @include reports-sm-md;
+  // appeals page
+  @include stats-sm-md;
+  @include today-sm-md;
+  @include donation-sm-md;
+  @include contact-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+  @include reports-sm-md-extra;
+  @include latest-sm-md-extra;
+  // appeals page
+  @include stats-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  @include hero-xsm-sm;
+  @include vision-xsm-sm;
+  @include info-xsm-sm;
+  @include faq-xsm-sm;
+  @include donate-xsm-sm;
+  @include footer-xsm-sm;
+  @include privacy-xsm-sm;
+  @include blogs-xsm-sm;
+  // appeals page
+  @include credit-xsm-sm;
+  @include today-xsm-sm;
+  @include emer-xsm-sm;
+  @include appeals-xsm-sm;
+  .intro {
+    &Item {
+      &__content {
+        &-link {
+          display: none;
+        }
+      }
+      &__overlay {
+        background: transparent !important;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 60%;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.9976365546218487) 21%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          content: "";
+        }
+      }
+      &__inner {
+        justify-content: flex-end;
+        padding-bottom: 130px;
+      }
+    }
+  }
+  @include basket-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+  @include emer-xxsm-xsm;
+}
+// 380px
+@include xxxsm-xxsm {
+  @include header-xxxsm-xxsm;
+}
